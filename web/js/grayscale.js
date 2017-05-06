@@ -33,12 +33,46 @@ $('.navbar-collapse ul li a').click(function() {
 });
 
 // Google Maps Scripts
-var map = null;
+//var map = null;
 // When the window has finished loading create our google map below
-google.maps.event.addDomListener(window, 'load', init);
-google.maps.event.addDomListener(window, 'resize', function() {
-    map.setCenter(new google.maps.LatLng(40.6700, -73.9400));
+//google.maps.event.addDomListener(window, 'load', init);
+//google.maps.event.addDomListener(window, 'resize', function() {
+//    map.setCenter(new google.maps.LatLng(40.6700, -73.9400));
+//});
+$('.main-gallery').flickity({
+  // options
+  pageDots: false,
+  wrapAround: 'true',
+  cellAlign: 'left',
+  contain: true,
 });
+
+var slideIndex = 1;
+showDivs(slideIndex);
+
+function plusDivs(n) {
+  showDivs(slideIndex += n);
+}
+
+function currentDiv(n) {
+  showDivs(slideIndex = n);
+}
+
+function showDivs(n) {
+  var i;
+  var x = document.getElementsByClassName("mySlides");
+  var dots = document.getElementsByClassName("demo");
+  if (n > x.length) {slideIndex = 1}
+  if (n < 1) {slideIndex = x.length}
+  for (i = 0; i < x.length; i++) {
+     x[i].style.display = "none";
+  }
+  for (i = 0; i < dots.length; i++) {
+     dots[i].className = dots[i].className.replace(" w3-opacity-off", "");
+  }
+  x[slideIndex-1].style.display = "block";
+  dots[slideIndex-1].className += " w3-opacity-off";
+}
 
 function init() {
     // Basic options for a simple Google Map

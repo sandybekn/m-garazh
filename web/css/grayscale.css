@@ -16,7 +16,6 @@ html {
 }
 h1,
 h2,
-h3,
 h4,
 h5,
 h6 {
@@ -124,7 +123,7 @@ a:focus {
   padding: 100px 0;
   text-align: center;
   color: white;
-  background: url(../img/intro-bg.jpg) no-repeat bottom center scroll;
+  background: url(../img/intro-bg1.jpg) no-repeat bottom center scroll;
   background-color: black;
   -webkit-background-size: cover;
   -moz-background-size: cover;
@@ -224,12 +223,18 @@ a:focus {
   width: 100%;
   padding: 50px 0;
   color: white;
-  background: url(../img/downloads-bg.jpg) no-repeat center center scroll;
   background-color: black;
   -webkit-background-size: cover;
   -moz-background-size: cover;
   background-size: cover;
   -o-background-size: cover;
+}
+#offer {
+  padding-top: 250px
+  background-color:si;
+}
+#about{
+  padding-top: 250px
 }
 #map {
   width: 100%;
@@ -238,11 +243,12 @@ a:focus {
 }
 @media (min-width: 767px) {
   .content-section {
-    padding-top: 250px;
+    padding-top: 160px;
   }
   .download-section {
     padding: 100px 0;
   }
+
   #map {
     height: 400px;
     margin-top: 250px;
@@ -312,3 +318,5 @@ img::-moz-selection {
 body {
   webkit-tap-highlight-color: rgba(255, 255, 255, 0.2);
 }
+
+
